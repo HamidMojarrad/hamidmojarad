@@ -3,108 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Personal Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Your Personal Website</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 70px; /* Adjusted padding to accommodate the fixed navbar */
+        }
+        .navbar {
+            background-color: #343a40; /* Dark background */
+        }
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+        .section {
+            padding: 100px 0;
+        }
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <nav>
-            <div class="logo">Hamid Mojarad</div>
-            <ul class="nav-links">
-                <li><a href="#about" style="text-decoration:none">About</a></li>
-                <li><a href="#research" style="text-decoration:none">Research</a></li>
-                <li><a href="#awards" style="text-decoration:none">Awards</a></li>
-                <li><a href="#publications" style="text-decoration:none">Publications</a></li>
-                <li><a href="#contact" style="text-decoration:none">Contact</a></li>
-            </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Hamid Mojarad</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#research">Research</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#awards">Awards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#publications">Publications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <main>
-    <section id="about">
-         <!-- Home Section -->
-         <section id="home" class="home-section section">
-            <div class="home-content">
-                <div class="left-column">
-                    <h1>PhD Student at University of Düsseldorf</h1>
-                    <p text-align="left">As a DAAD scholarship holder, I am currently pursuing my Ph.D. in English Language and Linguistics at Heinrich Heine University (HHU) Düsseldorf, under the supervision of Prof. Dr. Kevin Tang, beginning in April 2024. My research concentrates on Automatic Speech Recognition, with a particular emphasis on uncovering potential biases against the African American English community.</p>
+    <!-- About Section -->
+<section id="about" class="section bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Left Column: Text -->
+            <div class="col-md-6 text-center text-md-start">
+                <h2>PhD Student at University of Düsseldorf</h2>
+                <p text-align="left">As a DAAD scholarship holder, I am currently pursuing my Ph.D. in English Language and Linguistics at Heinrich Heine University (HHU) Düsseldorf, under the supervision of Prof. Dr. Kevin Tang, beginning in April 2024. My research concentrates on Automatic Speech Recognition, with a particular emphasis on uncovering potential biases against the African American English community.</p>
                     <br>
-					<p text-align="left">I hold an M.A. in Teaching English as a Foreign Language (TEFL) earned in 2014, a B.A. in English Translation obtained in 2010, and a B.Sc. in Software Engineering completed in 2004. Additionally, I served as a Research Assistant (R.A.) for two years, collaborating with Prof. Dr. Fatemeh Hemmati on E-Learning among TEFL M.A. students of Payame Noor University (PNU) in Iran. My research interests span various areas, including Intelligent Computer-Assisted Language Learning (ICALL), Technology-Enhanced Language Learning (TELL), and Computational Linguistics (CL).</p>
+					<p text-align="left">I hold an M.A. in Teaching English as a Foreign Language (TEFL) earned in 2014, a B.A. in English Translation obtained in 2010, and a B.Sc. in Software Engineering completed in 2004. Additionally, I served as a Research Assistant (R.A.) for two years, collaborating with Prof. Dr. Fatemeh Hemmati on E-Learning among TEFL M.A. students of Payame Noor University (PNU) in Iran. My research interests span various areas, including Automatic Speech Recognition (ASR), Intelligent Computer-Assisted Language Learning (ICALL), Technology-Enhanced Language Learning (TELL), and E-learning.</p>
 					<br>
 					<p text-align="left">I possess extensive experience as a Java developer, with a specialized focus on the Spring framework. I have also worked with C++ and C# for console applications and web development. As for front-end development, I know how to develop apps with Javascrip frameworks especially React.js for web and React Native for mobile development. For the time being, I am training myself with Python especially for deep learning purposes to implement my PhD thesis.</p>
-                </div>
-                <div class="right-column">
-                    <img src="Hamid.jpg" alt="Your Photo" class="profile-image">
+					
+            </div>
+            <!-- Right Column: Image -->
+            <div class="col-md-6 text-center">
+                <img src="Hamid.jpg" alt="Your Image" class="img-fluid" 
+                     style="max-width: 60%; height: auto; border-radius: 20px;">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Research Section -->
+<section id="research" class="section">
+    <div class="container">
+        <h2 class="text-center mb-5">Research Interests</h2>
+        <div class="row mb-4">
+            <!-- First Research Interest -->
+            <div class="col-md-12">
+                <div class="p-4 border rounded-3 shadow-sm bg-light">
+                    <h3>Automatic Speech Recognition</h3>
+                    <p>I am currently focused on Automatic Speech Recognition (ASR) and its related subfields under the supervision of Prof. Dr. Kevin Tang, who kindly introduced me to this area. My PhD research aims to address bias in ASR systems against the African American English (AAE) community. I will specifically examine the phonological features of AAE and their interaction with morpho-syntactic features, analyzing how these factors influence the performance of ASR systems. To carry out this research, I will leverage tools such as Montreal Forced Alignment and the Aeneas library, along with Python deep learning algorithms.</p>
                 </div>
             </div>
-        </section>
-    <section id="research">
-        <div id="home-content">
-            <h2>Research</h2>
-            <h3>Automatic Speech Recognition</h3>
-            <p>I am currently working on Automatic speech Recognition (ASR) and the relevant subfields. My PhD research is mitigating bias in ASR systems against African American English (AAE) community.
-                I will specifically work on AAE phonological features and their interaction with AAE morpho-syntactic features and how it will affect the performance of ASR systems.
-                I will utilise tools like Montreal Forced Alignment and Aeneas library as well as Python Deep learning algorithms to implement the research.
-            </p>
-            <h3>Computer Assisted Language Learning</h3>
-            <p>Based on my MA's field of research which concerned TEFL, I chose to work on a combination of computer science and teaching/learning. For that, I conducted two research projects on E-learning and it's role in English language learning and testing.
-                This was a basis for my interest towards what is called Intelligent Computer-Assisted Language Learning (ICALL). I were to continue this line of research in my PhD at the University of Tubingen, Germany; however, ASR interested me further, and I decided to choose it eventually.
-            </p>
         </div>
-    </section>
+        <div class="row">
+            <!-- Second Research Interest -->
+            <div class="col-md-12">
+                <div class="p-4 border rounded-3 shadow-sm bg-light">
+                    <h3>Computer Assisted Language Learning</h3>
+                    <p>Drawing from my Master’s research in Teaching English as a Foreign Language (TEFL), I decided to explore the intersection of computer science and language learning/teaching. To this end, I undertook two research projects focused on e-learning and its impact on English language acquisition and assessment. This experience interested me in what is known as Intelligent Computer-Assisted Language Learning (ICALL). I intended to pursue this research line for my PhD under the supervision of Prof. Dr. Detmar Meurers at the University of Tübingen, Germany. However, my enthusiasm towards Automatic Speech Recognition (ASR) ultimately led me to choose it as my primary focus.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <section id="awards">
-        <h2>Awards</h2>
-        <ul>
-            <li style="font-weight:bold">DAAD Research 4-year Doctoral Scholarship</li>
-            <p>I was awarded a 4-year scholarship by the German Academic Exchange Service (DAAD) to do my PhD at Heinrich Heine University (HHU) Düsseldorf. </p>
-            <li style="font-weight:bold">PhD-Exceptional Talent Award</li>
-            <p>Qualified for PhD admission interviews without the national entrance exam, Payame Noor University, Iran</p>
-            <li style="font-weight:bold">MA-Exceptional Talent Award</li>
-            <p>Honorary admission to M.A. program without the national entrance exam, Payame Noor University of Tehrane Jonoob, Iran</p>
+
+    <!-- Awards Section -->
+<section id="awards" class="section bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Awards & Honors</h2>
+        <ul class="list-group">
+            <!-- Award 1 -->
+            <li class="list-group-item p-4 border rounded-3 shadow-sm mb-3">
+                <h4>DAAD 4-year Research Scholarship</h4>
+                <p><strong>Organization:</strong> German Academic Exchange Service (DAAD)</p>
+                <p><strong>Date:</strong> April, 2024</p>
+                <p>I was awarded a 4-year Research Scholarship program by the German Academic Exchange Service (DAAD) to do my PhD at Heinrich Heine University (HHU) Düsseldorf.</p>
+            </li>
+            <!-- Award 2 -->
+            <li class="list-group-item p-4 border rounded-3 shadow-sm mb-3">
+                <h4>PhD-Exceptional Talent Award</h4>
+                <p><strong>Organization:</strong> Payame Noor University, Iran</p>
+                <p><strong>Date:</strong> August, 2014</p>
+                <p>I was qualified for PhD admission interviews without the national entrance exam as a top student among the Payame Noor University's MA students.</p>
+            </li>
+            <!-- Award 3 -->
+            <li class="list-group-item p-4 border rounded-3 shadow-sm mb-3">
+                <h4>MA-Exceptional Talent Award</h4>
+                <p><strong>Organization:</strong> Payame Noor University, Iran</p>
+                <p><strong>Date:</strong> August, 2011</p>
+                <p>I was granted a honorary admission to an M.A. program at Payame Noor University of Tehrane Jonoob, Iran, without the national entrance exam, as one of the top students during my bachelor's studies.</p>
+            </li>
+            <!-- Add more awards as needed -->
         </ul>
-    </section>
+    </div>
+</section>
 
-    <section id="publications">
-        <h2>Publications</h2>
-        <ul>
-            <li>Hemmati, F. & Mojarrad, H. (2016). E-learning and Distance Education: A Study of Iranian Teaching English as a Foreign Language Masters Students. Malaysian Journal of Distance Education. (Research Assistant)
+<!-- Publications Section -->
+<section id="publications" class="section">
+    <div class="container">
+        <h2 class="text-center mb-5">Publications</h2>
+        <ul class="list-group">
+            <!-- Publication 1 -->
+            <li class="list-group-item p-4 border rounded-3 shadow-sm mb-3">
+                <h4>E-learning and Distance Education: A Study of Iranian Teaching English as a Foreign Language Masters Students
+                </h4>
+                <p><strong>Journal/Conference:</strong> Malaysian Journal of Distance Education</p>
+                <p><strong>Date:</strong> 2016</p>
+                <p>I was co-author with my MA supervisor, Prof. Dr. Fatemeh Hemmati, to study the E-learning program for TEFL master's students at Payame Noor University. During two years, I served as a Research Assistant (RA) to implement the research project.</p>
+                <a href="first_paper.pdf" download>
+                    <i class="fa fa-file-pdf-o" aria-hidden="true" style="color: rgb(29, 57, 127);"></i> Download PDF
+                </a>
             </li>
-            <li>Hemmati, F. & Mojarrad, H. & ChatrZarin, S. (2016). Comparison of Iranian students' writing in Persian and English from the perspective of adaptive transfer. Third National Conference on Persian Linguistics and Language Teaching; The perspective of language research in the 21st century. Mashhad, Iran. (Persian Paper, Conference)
+            <!-- Publication 2 -->
+            <li class="list-group-item p-4 border rounded-3 shadow-sm mb-3">
+                <h4>Face to Face versus E-learning: An Investigation into the Performance of TEFL Master's Students of Payame Noor University
+                </h4>
+                <p><strong>Journal/Conference:</strong> Quarterly Journal of Research in School and Virtual Learning </p>
+                <p><strong>Date:</strong> 2016</p>
+                <p>In line with the above mentioned paper, this was the second paper of the research carried out by my MA. supervisor and me on E-learning program for TEFL MA students of Payame Noor University. However, due to the policies taken by the university, only the name of my supervisor was published in the paper.</p>
+                <a href="second_paper.pdf" download>
+                    <i class="fa fa-file-pdf-o" aria-hidden="true" style="color: rgb(29, 57, 127);"></i> Download PDF
+                </a>
             </li>
-            <li>Hemmati F. (2016). Traditional Learning versus E-learning: An Investigation into the Performance of TEFL M.A Students of PNU. Quarterly Journal of Research in School and Virtual Learning. Year 3- Number 11 (P 49-58). (Research Assistant) 
+            <!-- Publication 3 -->
+            <li class="list-group-item p-4 border rounded-3 shadow-sm mb-3">
+                <h4>Comparison of Iranian students' writing in Persian and English from the perspective of adaptive transfer
+                </h4>
+                <p><strong>Journal/Conference:</strong> Third National Conference on Persian Linguistics and Language Teaching; The perspective of language research in the 21st century. Mashhad, Iran. (Persian paper)</p>
+                <p><strong>Date:</strong> 2016</p>
+                <p>A collaboration with my MA supervisor and an MA researcher, Ms. Sahar Sadat ChatrZarin. </p>
+                <a href="third_paper.pdf" download>
+                    <i class="fa fa-file-pdf-o" aria-hidden="true" style="color: rgb(29, 57, 127);"></i> Download PDF
+                </a>
             </li>
-            <li>
-                Mojarrad, H. & Hemmati, F. & Gohar, M. & Sadeghi, A. (2014). Computer-based Assessment Vs. Paper/Pencil-based Assessment: An Investigation into the Performance and Attitude of Iranian EFL Learners' Reading Comprehension. International Journal of Language Learning and Applied Linguistics World. 
+            <!-- Publication 4 -->
+            <li class="list-group-item p-4 border rounded-3 shadow-sm mb-3">
+                <h4>Computer-based Assessment Vs. Paper/Pencil-based Assessment: An Investigation into the Performance and Attitude of Iranian EFL Learners' Reading Comprehension 
+                </h4>
+                <p><strong>Journal/Conference:</strong> International Journal of Language Learning and Applied Linguistics World</p>
+                <p><strong>Date:</strong> 2014</p>
+                <p>This was my first paper, extracted from my MA thesis, with the following co-authors: Prof. Dr. Fatemeh Hemmati my MA supervisor, Prof. Dr. Manuchehr Jafari Gohar my first advisor, and Dr. Amir Sadeghi my second advisor.</p>
+                <a href="forth_paper.pdf" download>
+                    <i class="fa fa-file-pdf-o" aria-hidden="true" style="color: rgb(29, 57, 127);"></i> Download PDF
+                </a>
             </li>
+            <!-- Add more publications as needed -->
         </ul>
-    </section>
+    </div>
+</section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        
-        <p><i style=color:rgb(29,57,127);></i> <a href="mailto:hamid.mojarad@hhu.de" target="_blank">hamid.mojarad (at) hhu.de</a></p><p><i class="fa fa-envelope" style=color:rgb(29,57,127);></i>
-            Heinrich-Heine-Universit&auml;t D&uuml;sseldorf<br>
-          Department for English Language and Linguistics<br>
-          Geb. 23.21.02.107<br>
-          Universit&auml;tsstr. 1<br>
-          40225 D&uuml;sseldorf<br>
-            [<a href="https://maps.app.goo.gl/G1CWrkUHaDRN6jAD7" target="_blank"><i class="fa fa-map-o" style=color:rgb(29,57,127);></i> Google Map</a>]<br>
 
-    </section>
-    </main>
+  <!-- Contact Section -->
+<section id="contact" class="section bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Contact</h2>
+        <div class="row">
+            <!-- Left Column: Contact Information Panel -->
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <p>
+                            <i class="fa fa-envelope" style="color:rgb(29,57,127);"></i> 
+                            <a href="mailto:hamid.mojarad@hhu.de" target="_blank">hamid.mojarad (at) hhu.de</a>
+                        </p>
+                        <p>
+                            <i class="fa fa-university" style="color:rgb(29,57,127);"></i> 
+                            Heinrich-Heine-Universit&auml;t Düsseldorf<br>
+                            Department for English Language and Linguistics<br>
+                            Geb. 23.21.02.107<br>
+                            Universit&auml;tsstr. 1<br>
+                            40225 Düsseldorf<br>
+                            [<a href="https://maps.app.goo.gl/G1CWrkUHaDRN6jAD7" target="_blank">
+                            <i class="fa fa-map-o" style="color:rgb(29,57,127);"></i> Google Map</a>]
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Right Column: Google Map Panel -->
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body p-4 text-center">
+                        <a href="https://maps.app.goo.gl/G1CWrkUHaDRN6jAD7" target="_blank">
+                            <img src="https://maps.googleapis.com/maps/api/staticmap?center=51.1901,6.7939&zoom=15&size=600x300&maptype=roadmap&markers=color:red%7Clabel:H%7C51.1901,6.7939" 
+                                 alt="Google Map of Heinrich-Heine-Universität Düsseldorf" class="img-fluid rounded">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+
+
+
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <p>© 2024 Hamid Mojarad - All Rights Reserved</p>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
